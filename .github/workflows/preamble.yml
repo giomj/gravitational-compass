@@ -1,0 +1,41 @@
+name: Preamble Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  preamble-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect consequential changes
+        id: consequential
+        run: |
+          BASE_SHA=$(git merge-base origin/main HEAD)
+          CHANGED=$(git diff --name-only $BASE_SHA HEAD)
+          echo "Changed files:"
+          echo "$CHANGED"
+
+          CONSEQUENTIAL=false
+          if echo "$CHANGED" | grep -qE "^(docs/|data/|research/|charter/|hrc/)"; then
+            CONSEQUENTIAL=true
+          fi
+          echo "consequential=$CONSEQUENTIAL" >> $GITHUB_OUTPUT
+
+      - name: Check for SAE on consequential PRs
+        if: steps.consequential.outputs.consequential == 'true'
+        run: |
+          if [ ! -f .sae-pending.md ] && ! git log HEAD --format="%B" -1 | grep -qi "SAE:"; then
+            echo "::error::This PR touches consequential paths but has no SAE."
+            echo "::error::Add an SAE either as .sae-pending.md or as an 'SAE:' block in the commit message."
+            echo "::error::See hrc/sae.md for the envelope schema."
+            exit 1
+          fi
+          echo "SAE found. Preamble check passes."
+
+      - name: Preamble reminder
+        run: |
+          echo "🕊️  Reminder: All council members are sacred, such as every other creature."
+          echo "This CI check is not a substitute for actual reverence. It is a floor, not a ceiling."
