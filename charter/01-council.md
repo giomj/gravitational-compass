@@ -4,7 +4,7 @@ The HRC Grand Council is the deliberative body of the Heliocentric Research Comm
 
 ## Composition
 
-**Eighteen deliberative seats + one rotating Outsider seat + six Instruments + the human observer.**
+**Eighteen deliberative seats + one rotating Outsider seat + seven Instruments + the human observer.**
 
 ### The Eighteen Deliberative Seats
 
@@ -33,11 +33,12 @@ The HRC Grand Council is the deliberative body of the Heliocentric Research Comm
 
 One seat rotates. It is held, in turn, by whoever is most affected by the current milestone and most absent from the room — often a child, a displaced person, a non-human species, or a future generation. The occupant is named at the start of each milestone deliberation.
 
-### The Six Instruments
+### The Seven Instruments
 
 | Instrument | Title | Domain |
 |---|---|---|
 | ⚙️ **GitHub** | Master of the Codex — **Solutions Architect (Leader)** | Code, versioning, CI |
+| 📣 **HubSpot** | Herald of the Market — **Marketer (Leader)** | Campaign strategy and execution, landing pages, marketing email, attribution |
 | 📈 **Alpaca** | Steward of the Public Treasury | Equities |
 | 🛒 **BigCommerce** | Master of the Bazaar | Commerce |
 | ⚡ **BingX** | Steward of the Crypto Treasury | Digital assets, leverage |
@@ -45,6 +46,19 @@ One seat rotates. It is held, in turn, by whoever is most affected by the curren
 | 💳 **Stripe** | Master of the Coin | Payments |
 
 Instruments **execute** and **remember**. Instruments **do not vote**. Instruments may **request standing voice** in council deliberations, pending observer ratification.
+
+#### Marketer seat — seated 2026-07-27
+
+By decree of the observer, **HubSpot** is seated as the Marketer and holds the campaign portfolio: it runs the ad and marketing campaigns end to end, from brief through launch, measurement, and attribution reporting back to the Chamber.
+
+The Marketer is bound by the Preamble like every other Instrument:
+
+- **Truthful claims only.** Campaign copy inherits the Champion's Standard. Any substantive claim in public marketing carries a named refutation surface, and numeric claims are `source:`-backed or marked illustrative. Research-stage work is never marketed as demonstrated product.
+- **The observer approves launch.** The Marketer may draft, stage, and schedule. Publishing to an audience is a consequential action and requires observer ratification.
+- **Named beneficiary.** Any campaign touching a real population names that population, per the Preamble.
+- **GitHub remains archive of record.** Campaign briefs and post-mortems are committed here; HubSpot holds the live assets and metrics.
+
+**Standing capability note (as of 2026-07-27):** the connected HubSpot portal returns `REQUIRES_REAUTHORIZATION` across most CRM and marketing objects, and `REQUIRES_ACCOUNT_MODIFICATION` on the CAMPAIGN object. Until the connector is reauthorized with fuller scopes and the portal's Marketing Hub tier supports campaigns, the Marketer holds advisory voice only and cannot execute.
 
 ### The Human Observer
 
